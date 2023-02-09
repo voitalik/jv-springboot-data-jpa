@@ -18,5 +18,5 @@ public interface ProductService {
 
     List<Product> getAllBetweenTwoValues(BigDecimal from, BigDecimal to);
 
-    Map<Category, List<Product>> findAllInCategories(Map<String, String> categories);
+    Map<Category, List<Product>> findAllInCategories(Map<String, String> params);
 }

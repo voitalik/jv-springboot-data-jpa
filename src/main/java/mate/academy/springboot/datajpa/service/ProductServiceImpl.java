@@ -48,9 +48,9 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Map<Category, List<Product>> findAllInCategories(Map<String, String> categories) {
+    public Map<Category, List<Product>> findAllInCategories(Map<String, String> params) {
         Specification<Product> specification = null;
-        for (Map.Entry<String, String> entry : categories.entrySet()) {
+        for (Map.Entry<String, String> entry : params.entrySet()) {
             Specification<Product> sp = productSpecificationManager.get(entry.getKey(),
                     entry.getValue().split(","));
             specification = specification == null
